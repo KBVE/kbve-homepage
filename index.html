@@ -8,7 +8,8 @@ if (window.localStorage) {
                  clippy.load('Clippy', function(agent){
                         // do anything with the loaded agent
                         agent.show();
-                        agent.animate();
+                        agent.moveTo(100,100);
+                        agent.animate();                        
                         agent.speak('Sup bitch, I am back to rape your ram :D');
                     });
              });       
