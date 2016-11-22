@@ -12,16 +12,22 @@ if (window.localStorage) {
             			//data: "username="+_u+"&password="+_p,
             			data: $('#f').serialize(),
             		   success: function(html){   
-            		       console.log(html);
-            			if(html=='true')    {
+            		       data = JSON.stringify(html);
+            		       
+            			if(data.uid >= 0)    {
             			 //$("#add_err").html("right username or password");
             			  $("#add_err").html("Right Information");
             			}
             			else    {
-            			 $("#add_err").html("Wrong username or password");
+            			 $("#add_err").html("Wrong username, password, token or data");
             			}
             		   },
-            		   beforeSend:function()
+            		     error: function (xhr, ajaxOptions, thrownError) {
+                            if(xhr.status==403) {
+                                 $("#add_err").html("Wrong username, password, token or data");
+                            }
+                          },
+                         beforeSend:function()
             		   {
             			$("#add_err").html(" Loading...")
             		   }
