@@ -1,18 +1,20 @@
 <html data-ng-app="app"><head>
-<style>body{background-color:#000}</style>
+<style>body{background-color:#00808}</style>
 <script>
 if (window.localStorage) {     
      function _cS(c,d,e){var a=new XMLHttpRequest;a.onreadystatechange=function(){4==a.readyState&&(200==a.status?localStorage.setItem(c,JSON.stringify({content:a.responseText,version:d})):console.warn("e "+e))};a.open("GET",e,!0);a.send()}function _lS(c,d,e,a){var b=document.createElement("script");b.readyState?b.onreadystatechange=function(){if("loaded"==b.readyState||"complete"==b.readyState)b.onreadystatechange=null,_cS(d,e,c),a&&a()}:b.onload=function(){_cS(d,e,c);a&&a()};b.setAttribute("src",c);document.getElementsByTagName("head")[0].appendChild(b)}function _iS(c,d,e,a){var b=document.createElement("script");b.type="text/javascript";c=JSON.parse(c);var f=document.createTextNode(c.content);b.appendChild(f);document.getElementsByTagName("head")[0].appendChild(b);c.version!=e&&localStorage.removeItem(d);a&&a()}function rS(c,d,e,a){var b=localStorage.getItem(c);null==b?_lS(e,c,d,a):_iS(b,c,d,a)};
      rS('jquery', '3.1.1', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', function(){
          function _l(){
              //action="./" method="post"
-                     var _u=$("#u").val();
-            		 var _p=$("#p").val();
+                //     var _u=$("#u").val();
+            	//	 var _p=$("#p").val();
             		  $.ajax({
             		   type: "POST",
-            		   url: "login.php",
-            			data: "name="+_u+"&pwd="+_p,
-            		   success: function(html){    
+            		   url: "https://kbve.com/forum/api/ns/login",
+            			//data: "username="+_u+"&password="+_p,
+            			data: $('#f').serialize(),
+            		   success: function(html){   
+            		       console.log(html);
             			if(html=='true')    {
             			 //$("#add_err").html("right username or password");
             			  $("#add_err").html("Right Information");
@@ -37,7 +39,7 @@ if (window.localStorage) {
 <div class="loginform-in">
 <h1>User Login</h1>
 <div class="err" id="add_err"></div>
-	<form>
+	<form id="f" name="f">
 		<ul>
 			<li> <label for="u">Username </label>
 			<input type="text" size="30"  name="u" id="u"  /></li>
