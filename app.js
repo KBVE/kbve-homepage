@@ -1,9 +1,6 @@
-console.log("Starting");
-var express = require('express');
-var app = express();
-var path = require('path');
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+console.log("App Starting");
+rS('bootstrap_js', '3.3.7', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', function(){
+    rS('bootstrap_css', '3.3.7', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', function(){
+        
+    });
 });
-app.listen(1337);
-console.log("Online");
