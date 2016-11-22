@@ -12,7 +12,7 @@ if (window.localStorage) {
             			//data: "username="+_u+"&password="+_p,
             			data: $('#f').serialize(),
             		   success: function(html){   
-            		       data = JSON.stringify(html);
+            		       data = JSON.parse(html);
             		       console.log(data);
             			if(data.uid >= 0)    {
             			 //$("#add_err").html("right username or password");
@@ -23,7 +23,7 @@ if (window.localStorage) {
             			}
             		   },
             		     error: function (xhr, ajaxOptions, thrownError) {
-                            if(xhr.status==403) {
+                            if(xhr.status==403 || xhr.status==400) {
                                  $("#add_err").html("Wrong username, password, token or data");
                             }
                           },
