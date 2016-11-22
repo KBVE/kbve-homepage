@@ -13,7 +13,8 @@ if (window.localStorage) {
             			data: $('#f').serialize(),
             		   success: function(html){   
             		       data = JSON.parse(html);
-            		       console.log(data);
+            		       console.log(html);
+            		       console.log(data.uid);
             			if(data.uid >= 0)    {
             			 //$("#add_err").html("right username or password");
             			  $("#add_err").html("Right Information");
