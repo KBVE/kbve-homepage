@@ -11,9 +11,8 @@ if (window.localStorage) {
             		   url: "https://kbve.com/forum/api/ns/login",
             			//data: "username="+_u+"&password="+_p,
             			data: $('#f').serialize(),
-            		   success: function(html){   
-            		       data = JSON.parse(html);
-            		       console.log(html);
+            		   success: function(data){   
+            		  console.log(data);
             			if(data.uid >= 0)    {
             			 //$("#add_err").html("right username or password");
             			  $("#add_err").html("Right Information");
