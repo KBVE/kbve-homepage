@@ -9,7 +9,7 @@ if (window.localStorage) {
                   if(/^[a-z]+$/i.test(hash)) 
                     { 
                         h = nfc.concat(hash,'/index.js'); 
-                        rS('h', hash, h, function(){ console.log('Loading...'); });
+                        rS('h', hash, h, function(){ console.log('Loading...' + hash);});
                         }
                     else
                     {
