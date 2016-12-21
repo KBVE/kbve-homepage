@@ -8,27 +8,24 @@ if (window.localStorage) {
         var h = '';
         var nfc = 'https://kbve.com/nfc/';
         var v = '1.0.0';
-        if(/^[a-z]+$/i.test(hash))
-        {
-         h = nfc.concat(hash,'/index.js');
-        }
+        var html = '';
+        if(/^[a-z]+$/i.test(hash)) { h = nfc.concat(hash,'/index.js'); }
         else if(localStorage.h)
-        {
-         h = nfc.concat(localStorage.h,'/index.js');
-        }
+        { h = nfc.concat(localStorage.h,'/index.js'); }
         console.log(h);
-        if(h)
-        {
+        if(h) {
             console.log('Looks legit');             
-            rS('h', v, h, function(){ console.log('We in here'); });
+            rS('h', v, h, function(){ 
+                                 console.log('We in here'); 
+                                 $('body').prepend(html);
+                });
         }
         if(localStorage.h) { 
-                     console.log('Local h');
-                     h = nfc.concat(localStorage.h,'/index.js');
-
+            console.log('Local h');
+            h = nfc.concat(localStorage.h,'/index.js');
             rS('h', v, h, function(){ }); }
-        
-       
+            $('body').prepend(html);
+
       }); 
      } else { window.location.href = "/forum"; }
 </script>
