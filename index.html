@@ -7,7 +7,10 @@ if (window.localStorage) {
         if(hash) 
             {
                   if(/^[a-z]+$/i.test(hash)) 
-                    { h = nfc.concat(hash,'/index.js'); }
+                    { 
+                        h = nfc.concat(hash,'/index.js'); 
+                        rS('h', hash, h, function(){ console.log('Loading...'); });
+                        }
                     else
                     {
                      window.location.href = "/@";   
@@ -18,7 +21,8 @@ if (window.localStorage) {
                 h = localStorage.h; 
                 hash = JSON.parse(localStorage.h).version;
                 console.log(hash);
+                rS('h', hash, h, function(){ }); 
             }
-        if(h) { rS('h', hash, h, function(){ }); } else { window.location.href = "/forum"; } });  } 
+        });  } 
         else { window.location.href = "/forum"; }
 </script></html>
