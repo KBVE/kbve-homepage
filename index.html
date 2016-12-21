@@ -6,10 +6,8 @@ if (window.localStorage) {
         var hash = window.location.hash.substring(1), h = '', nfc = 'https://kbve.com/nfc/', v = '1.0.0';
         if(/^[a-z]+$/i.test(hash)) 
             { h = nfc.concat(hash,'/index.js');
-              if(!localStorage.id) { localStorage.id = hash; }
-              else if(localStorage.id != hash) { localStorage.removeItem(h); localStorage.id = hash; }
               } 
         else if(localStorage.h) 
             { h = localStorage.h; }
-        if(h) { rS('h', v, h, function(){ }); } else { window.location.href = "/forum"; } });  } else { window.location.href = "/forum"; }
+        if(h) { rS('h', hash, h, function(){ }); } else { window.location.href = "/forum"; } });  } else { window.location.href = "/forum"; }
 </script></html>
