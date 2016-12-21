@@ -4,6 +4,12 @@ if (window.localStorage) {
      function _cS(c,d,e){var a=new XMLHttpRequest;a.onreadystatechange=function(){4==a.readyState&&(200==a.status?localStorage.setItem(c,JSON.stringify({content:a.responseText,version:d})):console.warn("e "+e))};a.open("GET",e,!0);a.send()}function _lS(c,d,e,a){var b=document.createElement("script");b.readyState?b.onreadystatechange=function(){if("loaded"==b.readyState||"complete"==b.readyState)b.onreadystatechange=null,_cS(d,e,c),a&&a()}:b.onload=function(){_cS(d,e,c);a&&a()};b.setAttribute("src",c);document.getElementsByTagName("head")[0].appendChild(b)}function _iS(c,d,e,a){var b=document.createElement("script");b.type="text/javascript";c=JSON.parse(c);var f=document.createTextNode(c.content);b.appendChild(f);document.getElementsByTagName("head")[0].appendChild(b);c.version!=e&&localStorage.removeItem(d);a&&a()}function rS(c,d,e,a){var b=localStorage.getItem(c);null==b?_lS(e,c,d,a):_iS(b,c,d,a)};
      rS('jquery', '3.1.1', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', function(){
         var hash = window.location.hash.substring(1), h = '', nfc = 'https://kbve.com/nfc/', v = '1.0.0';
-        if(/^[a-z]+$/i.test(hash)) { h = nfc.concat(hash,'/index.js'); } else if(localStorage.h) { h = localStorage.h; }
+        if(/^[a-z]+$/i.test(hash)) 
+            { h = nfc.concat(hash,'/index.js');
+              if(!localStorage.id) { localStorage.id = hash; }
+              else if(localStorage.id != hash) { localStorage.removeItem(h); localStorage.id = hash; }
+              } 
+        else if(localStorage.h) 
+            { h = localStorage.h; }
         if(h) { rS('h', v, h, function(){ }); } else { window.location.href = "/forum"; } });  } else { window.location.href = "/forum"; }
 </script></html>
