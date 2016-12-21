@@ -6,7 +6,7 @@ if (window.localStorage) {
          
         if(localStorage.h) { rS('h', '0.0.1', 'https://kbve.com/nfc/' + localStorage.h + '/index.js', function(){ }); }
         
-        if(!localStorage.h && window.location.hash && /^[a-z]+$/i.test(window.location.hash))
+        else if(window.location.hash && /^[a-z]+$/i.test(window.location.hash))
         console.log("we in here");
         { rS('h', '0.0.1', 'https://kbve.com/nfc/' +  window.location.hash + '/index.js', function(){  });}
     
