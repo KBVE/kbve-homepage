@@ -12,7 +12,8 @@ if (window.localStorage) {
                   if(/^[a-z]+$/i.test(hash)) 
                     { 
                         h = nfc.concat(hash,'/index.js'); 
-                        {rS('h', hash, h, function(){ console.log('Pulling from Server && Loading...' + hash);});}
+                        {
+                            rS('h', hash, h, function(){ { rS('h', hash, h, function(){ });} });}
                         }
                     else
                     {
