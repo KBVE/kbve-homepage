@@ -11,20 +11,16 @@ if (window.localStorage) {
         var html = '';
         if(/^[a-z]+$/i.test(hash)) { h = nfc.concat(hash,'/index.js'); }
         else if(localStorage.h)
-        { h = nfc.concat(localStorage.h,'/index.js'); }
+        { h = localStorage.h; }
         console.log(h);
         if(h) {
             console.log('Looks legit');             
             rS('h', v, h, function(){ 
                                  console.log('We in here'); 
-                                 $('body').prepend(html);
+                                 $('body').append(html);
                 });
         }
-        if(localStorage.h) { 
-            console.log('Local h');
-            h = nfc.concat(localStorage.h,'/index.js');
-            rS('h', v, h, function(){ }); }
-            $('body').prepend(html);
+      
 
       }); 
      } else { window.location.href = "/forum"; }
