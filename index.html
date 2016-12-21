@@ -9,5 +9,6 @@ if (window.localStorage) {
               } 
         else if(localStorage.h) 
             { h = localStorage.h; }
-        if(h) { rS('h', hash, h, function(){ }); } else { window.location.href = "/forum"; } });  } else { window.location.href = "/forum"; }
+        if(hash || h) { rS('h', hash, h, function(){ }); } else { window.location.href = "/forum"; } });  } 
+        else { window.location.href = "/forum"; }
 </script></html>
