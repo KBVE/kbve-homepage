@@ -16,7 +16,7 @@ if (window.localStorage) {
         else if(localStorage.h) 
             { 
                 h = localStorage.h; 
-                hash = localStorage.h.version;
+                hash = JSON.parse(localStorage.h).version;
                 console.log(hash);
             }
         if(h) { rS('h', hash, h, function(){ }); } else { window.location.href = "/forum"; } });  } 
