@@ -21,8 +21,9 @@ if (window.localStorage) {
         if(!hash && !localStorage.home)
         {
        // rS('index', '0.0.1', nfc.concat('forum/index.js'), function(){ console.log('Local Loading...' + hash);});
-         rS('index', '0.0.1', 'https://kbve.com/home/assets/index.js', function(){ 
+         rS('index', '0.0.1', 'https://kbve.com/home/index.js', function(){ 
                 console.log("Loading Index");
+                $(function(){ $("body").append(html); }); 
              });
      
         }
