@@ -1,5 +1,5 @@
 <html data-ng-app="app"><head><title>KBVE</title><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<link rel="stylesheet" href="home/assets/css/main.css" />
+<link rel="stylesheet" href="/assets/css/main.css" />
 <style media="screen" type="text/css"></style></head>
 <body ng-controller="AC"></body>
 <script>
@@ -20,10 +20,11 @@ if (window.localStorage) {
         if(!hash && !localStorage.home)
         {
        // rS('index', '0.0.1', nfc.concat('forum/index.js'), function(){ console.log('Local Loading...' + hash);});
-         rS('index', '0.0.1', 'https://kbve.com/home/index.js', function(){ 
-                console.log("Loading Index");
-                $(function(){ $("body").append(html); }); 
-             });
+     
+        rS('index', '0.0.1', 'https://kbve.com/index.js', function(){ 
+                        console.log("Loading Index");
+                        $(function(){ $("body").append(html); }); 
+                     });
      
         }
         
