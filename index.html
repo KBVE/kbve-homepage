@@ -5,8 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic" rel='stylesheet' type='text/css'> />
 	</head>
-	<body><div id="wrapper" class="wrapper"></div>
+	<body>
 	</body>
     <script>
     if (window.localStorage) {     
@@ -17,7 +18,7 @@
             });
      
      rS('html','1','index.js', function(){ 
-     			  $(function(){ $(".wrapper").append(html); }); 
+     			  $(function(){ $("body").append(html); }); 
             });
     
      rS('skel', '0.0.1', 'assets/js/skel.js', function(){ 
