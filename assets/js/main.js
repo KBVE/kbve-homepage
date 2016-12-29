@@ -58,6 +58,10 @@
 					firstPanelId = null,
 					isLocked = false,
 					hash = window.location.hash.substring(1);
+					 if(/^[a-z]+$/i.test(hash)) 
+						{
+							
+						}
 
 				if (skel.vars.touch) {
 
