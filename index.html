@@ -1,5 +1,7 @@
 <html data-ng-app="app"><head><title>KBVE</title><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<link rel="stylesheet" href="/assets/css/main.css" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic" >
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
 <style media="screen" type="text/css"></style></head>
 <body ng-controller="AC"></body>
 <script>
@@ -21,10 +23,25 @@ if (window.localStorage) {
         {
        // rS('index', '0.0.1', nfc.concat('forum/index.js'), function(){ console.log('Local Loading...' + hash);});
      
+      rS('index', '0.0.1', 'https://kbve.com/assets/css/main.js', function(){ 
+           $(function(){ $("head").append(css); }); 
+      });
         rS('index', '0.0.1', 'https://kbve.com/index.js', function(){ 
                         console.log("Loading Index");
                         $(function(){ $("body").append(html); }); 
                      });
+         rs('skel', '0.0.1', 'assets/js/skel.js', function(){ 
+            rs('skel-v', '0.0.1', 'assets/js/skel-viewport.js', function(){ 
+                         });
+                       
+                     });
+          rs('util', '0.0.1', 'assets/js/util.js', function(){ 
+                           
+                         }); 
+          rs('main', '0.0.1', 'assets/js/main.js', function(){ 
+                           
+                         });
+
      
         }
         
