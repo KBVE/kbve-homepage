@@ -1,6 +1,19 @@
 CACHE MANIFEST
 # LIST ALL YOUR FILES 
-
+/assets/css/main.css
+/assets/css/main.css.gz
+/images/logo.png
+/assets/css/css.js
+/assets/css/css.js.gz
+/assets/fonts/fontawesome-webfont.eot
+/images/pic01.jpg
+/images/pic02.jpg
+/assets/css/images/bg.jpg
+/assets/css/images/overlay.png
+/assets/css/font-awesome.min.css
+/assets/css/font-awesome.min.css.gz
+/assets/*
+/images/*
 
 NETWORK: 
 *
