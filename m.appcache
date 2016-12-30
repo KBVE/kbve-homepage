@@ -12,8 +12,6 @@ CACHE MANIFEST
 /assets/css/images/overlay.png
 /assets/css/font-awesome.min.css
 /assets/css/font-awesome.min.css.gz
-/assets/*
-/images/*
 /favicon.ico
 
 NETWORK: 
