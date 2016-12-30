@@ -29,6 +29,11 @@
 
 	$window.on('load', function() {
 
+		 if(/^[a-z]+$/i.test(window.location.hash.substring(1))) 
+						{
+						  	console.log('Loading ' + window.location.hash.substring(1));
+						}
+
 		skel
 			.breakpoints({
 				desktop: '(min-width: 737px)',
@@ -58,10 +63,7 @@
 					firstPanelId = null,
 					isLocked = false,
 					hash = window.location.hash.substring(1);
-					 if(/^[a-z]+$/i.test(hash)) 
-						{
-						  	console.log('Loading ' + hash);
-						}
+					
 
 				if (skel.vars.touch) {
 
