@@ -14,6 +14,7 @@ CACHE MANIFEST
 /assets/css/font-awesome.min.css.gz
 /assets/*
 /images/*
+/favicon.ico
 
 NETWORK: 
 *
