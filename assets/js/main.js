@@ -60,7 +60,7 @@
 					hash = window.location.hash.substring(1);
 					 if(/^[a-z]+$/i.test(hash)) 
 						{
-							
+						  	console.log('Loading ' + hash);
 						}
 
 				if (skel.vars.touch) {
