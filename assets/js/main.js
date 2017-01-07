@@ -25,14 +25,19 @@
 
 	};
 
+
+	if(!localStorage.home)
+        { 
+        	
+        }
+        
+	
 	var $window = $(window);
+
+	
 
 	$window.on('load', function() {
 
-		 if(/^[a-z]+$/i.test(window.location.hash.substring(1))) 
-						{
-						  	console.log('Loading ' + window.location.hash.substring(1));
-						}
 
 		skel
 			.breakpoints({

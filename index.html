@@ -1,4 +1,5 @@
-<!DOCTYPE HTML><html manifest="m.appcache">
+<!DOCTYPE HTML>
+<html manifest="m.appcache">
 	<head>
 		<title>KBVE</title>
 		<meta charset="utf-8" />
@@ -9,8 +10,9 @@
 	<div id="wrapper">
 		  	<nav id="nav">
 		  		<a href="#me" class="icon fa-home active"><span>Home</span></a>
+		  		<a href="/forum" class="icon fa-comments"><span>Forum</span></a>
 		  		<a href="#mc" class="icon fa-cube"><span>MC</span></a>
-
+				<a href="#i" class="icon fa-searchplus"><span>Install</span></a>
 		  	</nav>
 		  	
 		  	<div id="main">
@@ -20,7 +22,7 @@
 									<p>Gaming. Development. Technology.</p>
 								</header>
 								<a href="#work" class="jumplink pic">
-									<span class="arrow icon fa-chevron-right"><span>Come Play MC</span></span>
+									<span class="arrow icon fa-chevron-right"><span>Check us out!</span></span>
 									<img src="images/me.jpg" alt="" />
 								</a>
 			</article>
@@ -65,8 +67,5 @@
             }); 
     rS('main', '0.0.1', 'assets/js/main.js', function(){ 
             });
-        if(!localStorage.home)
-        { 
-        }
         
         });  } else { window.location.href = "/forum"; }</script></html>
