@@ -34,11 +34,11 @@
 	
 	var $window = $(window);
 
-	
+
 
 	$window.on('load', function() {
 
-
+		console.log(window.location.hash.substring(1));
 		skel
 			.breakpoints({
 				desktop: '(min-width: 737px)',
