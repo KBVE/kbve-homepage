@@ -39,6 +39,9 @@
 
 	$window.on('hashchange', function() {
 			console.log(window.location.hash.substring(1));
+			if (typeof rS == 'function') { 
+				
+			}
 	});
 
 	$window.on('load', function() {
