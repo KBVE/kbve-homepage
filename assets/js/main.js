@@ -38,9 +38,15 @@
 	var $window = $(window);
 
 	$window.on('hashchange', function() {
-			console.log(window.location.hash.substring(1));
+			var hash_load = window.location.hash.substring(1).replace(/[^a-z0-9]/gi,'');;
+			//console.log(hash_load);
+			
 			if (typeof rS == 'function') { 
-				
+				var nfc_hash = 'https://kbve.com/'.concat(hash_load, '/index.js');
+				rs(hash_load, global_hash, nfc_hash, function(){ 
+						
+						console.log("Loading ... " + hash_load);
+        		 });
 			}
 	});
 
